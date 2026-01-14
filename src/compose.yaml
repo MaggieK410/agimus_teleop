@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  agimus-demos-container:
+    container_name: agimus-demos-container
+    image: gitlab.laas.fr:4567/agimus-project/agimus_dev_container:humble-devel-control
+    privileged: true
+    network_mode: host
+    ipc: host
+    user: gepetto
+
+    environment:
+      DISPLAY: ${DISPLAY}
+      QT_X11_NO_MITSHM: "1"
+      ROS_DOMAIN_ID: ${ROS_DOMAIN_ID}
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev/dri:/dev/dri:rw
+
+    working_dir: /home/gepetto/ros2_ws/src
+
+    command: sleep infinity
