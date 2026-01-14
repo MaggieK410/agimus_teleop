@@ -1,0 +1,14 @@
+# VS Code
+.vscode/
+
+# ROS / build artifacts
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store

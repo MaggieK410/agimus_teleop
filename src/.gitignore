@@ -1,0 +1,10 @@
+*
+!.devcontainer/scripts/*.sh
+!.devcontainer/vision/*
+!.devcontainer/vision_cuda/*
+!.devcontainer/control/*
+!.vscode
+!.gitignore
+!.gitlab-ci.yml
+!.pre-commit-config.yaml
+!README.md
